@@ -7,6 +7,9 @@
       --accent: #b5885e;
     }
 
+    section {
+    padding: 80px 10%;
+    }
       
     /* html {
     scroll-padding-top: 0px;
