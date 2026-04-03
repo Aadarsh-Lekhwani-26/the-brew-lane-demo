@@ -136,127 +136,169 @@
 
 
   <!-- ----------------------------------------- -->
-   <section id="menu">
+  <section id="menu">
   <h2>Our Menu</h2>
   <h4>Discover our handcrafted beverages and freshly prepared treats</h4>
   <br>
 
-  <!-- HOT COFFEES -->
-  <div class="menu-category">
-    <h3 class="category-title">Hot Coffees</h3>
-    <div class="menu-items">
+  <!-- CATEGORY TABS -->
+  <div class="menu-tabs">
+    <button class="tab-btn active" data-category="all">All</button>
+    <button class="tab-btn" data-category="hot">Hot Coffee</button>
+    <button class="tab-btn" data-category="cold">Cold</button>
+    <button class="tab-btn" data-category="bakery">Bakery</button>
+    <button class="tab-btn" data-category="desserts">Desserts</button>
+  </div>
+  <h3 id="category-title" class="category-heading">All Items</h3>
+  <!-- HOT COFFEE -->
 
-      <div class="menu-card">
-        <img src="./images/espresso.jpg" alt="Espresso">
-        <h3>Espresso</h3>
-        <p>A concentrated shot of deep, roasted coffee flavor.</p>
-        <div class="price">₹120</div>
-      </div>
-
-      <div class="menu-card">
-        <img src="./images/americano.jpg" alt="Americano">
-        <h3>Americano</h3>
-        <p>Smooth espresso diluted with hot water for a bold, pure taste.</p>
-        <div class="price">₹140</div>
-      </div>
-
-      <div class="menu-card">
-        <img src="./images/cappuccino.jpg" alt="Cappuccino">
-        <h3>Cappuccino</h3>
-        <p>Perfect balance of espresso, milk, and frothy foam.</p>
-        <div class="price">₹160</div>
-      </div>
-
-      <div class="menu-card">
-        <img src="./images/mocha.jpg" alt="Mocha">
-        <h3>Mocha</h3>
-        <p>Espresso with chocolate and milk, topped with whipped cream.</p>
-        <div class="price">₹180</div>
-      </div>
-
-      <div class="menu-card">
-        <img src="./images/black-coffee.jpg" alt="Black Coffee">
-        <h3>Black Coffee</h3>
-        <p>Strong, aromatic brew with no milk — coffee in its truest form.</p>
-        <div class="price">₹130</div>
-      </div>
-
+  <div class="menu-item" data-category="hot">
+    <div class="menu-header">
+      <h3>Espresso</h3>
+      <span class="price">₹120</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="menu-details">
+      <img src="./images/espresso.jpg">
+      <p>A concentrated shot of deep, roasted coffee flavor.</p>
     </div>
   </div>
 
-
-  <!-- COLD BEVERAGES -->
-  <div class="menu-category">
-    <h3 class="category-title">Cold Beverages</h3>
-    <div class="menu-items">
-
-      <div class="menu-card">
-        <img src="./images/tabitha-turner-F0Wd4djYvSA-unsplash.jpg" alt="Iced Latte">
-        <h3>Iced Latte</h3>
-        <p>Chilled espresso mixed with creamy milk over ice.</p>
-        <div class="price">₹170</div>
-      </div>
-
+  <div class="menu-item" data-category="hot">
+    <div class="menu-header">
+      <h3>Americano</h3>
+      <span class="price">₹140</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="menu-details">
+      <img src="./images/americano.jpg">
+      <p>Smooth espresso diluted with hot water for a bold taste.</p>
     </div>
   </div>
 
-
-  <!-- BAKERY & PASTRIES -->
-  <div class="menu-category">
-    <h3 class="category-title">Bakery & Pastries</h3>
-    <div class="menu-items">
-
-      <div class="menu-card">
-        <img src="./images/croissant.jpg" alt="Croissant">
-        <h3>Croissant</h3>
-        <p>Classic flaky pastry with a buttery, golden crust.</p>
-        <div class="price">₹89</div>
-      </div>
-
-      <div class="menu-card">
-        <img src="./images/nutella-croissant.jpg" alt="Nutella Croissant">
-        <h3>Nutella Croissant</h3>
-        <p>Flaky croissant filled with smooth Nutella goodness.</p>
-        <div class="price">₹119</div>
-      </div>
-
-      <div class="menu-card">
-        <img src="./images/avocado-toast.jpg" alt="Avocado Toast">
-        <h3>Avocado Toast</h3>
-        <p>Crispy toast topped with creamy avocado and light seasoning.</p>
-        <div class="price">₹179</div>
-      </div>
-
+  <div class="menu-item" data-category="hot">
+    <div class="menu-header">
+      <h3>Cappuccino</h3>
+      <span class="price">₹160</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="menu-details">
+      <img src="./images/cappuccino.jpg">
+      <p>Perfect balance of espresso, milk, and foam.</p>
     </div>
   </div>
 
+  <div class="menu-item" data-category="hot">
+    <div class="menu-header">
+      <h3>Mocha</h3>
+      <span class="price">₹180</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="menu-details">
+      <img src="./images/mocha.jpg">
+      <p>Espresso with chocolate and milk.</p>
+    </div>
+  </div>
 
-  <!-- DESSERTS & SWEET TREATS -->
-  <div class="menu-category">
-    <h3 class="category-title">Desserts & Sweet Treats</h3>
-    <div class="menu-items">
+  <div class="menu-item" data-category="hot">
+    <div class="menu-header">
+      <h3>Black Coffee</h3>
+      <span class="price">₹130</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="menu-details">
+      <img src="./images/black-coffee.jpg">
+      <p>Strong, aromatic brew with no milk.</p>
+    </div>
+  </div>
 
-      <div class="menu-card">
-        <img src="./images/brownie.jpg" alt="Brownie">
-        <h3>Brownie</h3>
-        <p>Fudgy, chocolate-rich square baked to perfection.</p>
-        <div class="price">₹130</div>
-      </div>
+  <!-- COLD -->
 
-      <div class="menu-card">
-        <img src="./images/waffles.jpg" alt="Waffles">
-        <h3>Waffles</h3>
-        <p>Golden crisp waffles served with syrup or toppings of choice.</p>
-        <div class="price">₹159</div>
-      </div>
+  <div class="menu-item" data-category="cold">
+    <div class="menu-header">
+      <h3>Iced Latte</h3>
+      <span class="price">₹170</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="menu-details">
+      <img src="./images/tabitha-turner-F0Wd4djYvSA-unsplash.jpg">
+      <p>Chilled espresso mixed with creamy milk.</p>
+    </div>
+  </div>
 
-      <div class="menu-card">
-        <img src="./images/donuts.jpg" alt="Donuts">
-        <h3>Donuts</h3>
-        <p>Soft, glazed rings with a hint of sweetness in every bite.</p>
-        <div class="price">₹99</div>
-      </div>
+  <!-- BAKERY -->
 
+  <div class="menu-item" data-category="bakery">
+    <div class="menu-header">
+      <h3>Croissant</h3>
+      <span class="price">₹89</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="menu-details">
+      <img src="./images/croissant.jpg">
+      <p>Classic flaky pastry.</p>
+    </div>
+  </div>
+
+  <div class="menu-item" data-category="bakery">
+    <div class="menu-header">
+      <h3>Nutella Croissant</h3>
+      <span class="price">₹119</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="menu-details">
+      <img src="./images/nutella-croissant.jpg">
+      <p>Flaky croissant filled with Nutella.</p>
+    </div>
+  </div>
+
+  <div class="menu-item" data-category="bakery">
+    <div class="menu-header">
+      <h3>Avocado Toast</h3>
+      <span class="price">₹179</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="menu-details">
+      <img src="./images/avocado-toast.jpg">
+      <p>Crispy toast topped with avocado.</p>
+    </div>
+  </div>
+
+  <!-- DESSERTS -->
+
+  <div class="menu-item" data-category="desserts">
+    <div class="menu-header">
+      <h3>Brownie</h3>
+      <span class="price">₹130</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="menu-details">
+      <img src="./images/brownie.jpg">
+      <p>Chocolate-rich brownie.</p>
+    </div>
+  </div>
+
+  <div class="menu-item" data-category="desserts">
+    <div class="menu-header">
+      <h3>Waffles</h3>
+      <span class="price">₹159</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="menu-details">
+      <img src="./images/waffles.jpg">
+      <p>Golden crisp waffles.</p>
+    </div>
+  </div>
+
+  <div class="menu-item" data-category="desserts">
+    <div class="menu-header">
+      <h3>Donuts</h3>
+      <span class="price">₹99</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="menu-details">
+      <img src="./images/donuts.jpg">
+      <p>Soft glazed donuts.</p>
     </div>
   </div>
 
@@ -338,5 +380,12 @@
       Powered by <strong>MenuMint</strong> — Digital Menu Solutions
     </p>
   </footer>
+
+
+
+
+
+
+  <script src="./script.js"></script>
 </body>
 </html>
