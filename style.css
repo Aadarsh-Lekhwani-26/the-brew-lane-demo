@@ -48,10 +48,9 @@
       color: inherit;
     }
 
-    section {
-      padding: 80px 10%;
+    #menu {
+    padding-top: 120px; 
     }
-
     /* ---------- HEADER ---------- */
     header {
           animation: fadeIn 2s ease-in-out;
@@ -61,20 +60,24 @@
       width: 100%;
       top: 0;
       left: 0;
+      height: 70px;
       background-color: transparent; 
       backdrop-filter: blur(6px);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: nowrap;
-      padding: 12px 20px;
+      /* flex-wrap: nowrap; */
+      padding: 0 20px;
       z-index: 1000;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       
     }
 
+
     .logo {
       font-family: 'Playfair Display', serif;
+      display: flex;
+      align-items: center;
       font-size: 1.7em;
       font-weight: 600;
        color: rgb(52,19,5);
@@ -94,9 +97,57 @@
     }
 
     nav a:hover {
-      /* color: var(--accent); */
-      /* color: rgb(19,10,8); */
       color: rgb(45,30,20);
+    }
+    /* Hamburger */
+
+    .menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: var(--accent);
+    padding: 5px 10px;
+    }
+    .nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    }
+    .menu-toggle {
+    display: none;
+    }
+    /* Mobile Navbar */
+
+    @media (max-width: 768px){
+
+    .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+    width: 200px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+    display: flex;
+    }
+
+    .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    }
+
     }
 
     /* ---------- HERO SECTION ---------- */
@@ -187,10 +238,11 @@
     overflow-x:auto;
     margin-bottom:30px;
     position:sticky;
-    top:70px;
+    top:83px;
     background:var(--cream);
     padding:10px 0;
     z-index:999;
+    margin-top: 20px;
     }
 
     .tab-btn {
