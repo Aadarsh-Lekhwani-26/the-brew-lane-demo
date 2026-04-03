@@ -427,6 +427,10 @@
 
     .social {
         display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+
     }
     footer div.social{
         height: 30px;
@@ -438,12 +442,18 @@
     }
     .social a{
         display: flex;
+        align-items: center;
         gap: 10px;
     }
     .social a:hover{
         color: rgb(181,136,94);
         transition: 0.3s;
 
+    }
+    .social img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
     }
 
 /* new */
@@ -560,7 +570,9 @@
       /* Footer */
       footer .address{
       flex-direction:column;
+      align-items: center;
       gap:20px;
+      text-align: center;
       }
       .floating-buttons {
       bottom: 15px;
