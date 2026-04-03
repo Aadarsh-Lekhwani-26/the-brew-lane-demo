@@ -13,6 +13,13 @@
       box-sizing: border-box;
       scroll-behavior: smooth;
     }
+    *{
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button, a, div {
+      outline: none;
+    }
 
     body {
       font-family: 'Poppins', sans-serif;
@@ -186,6 +193,7 @@
     border:none;
     border-radius:20px;
     background:white;
+    color: rgb(120,90,70);
     cursor:pointer;
     white-space:nowrap;
     }
@@ -199,23 +207,29 @@
     /* Menu Items */
 
     .menu-item {
+      /* display: grid; */
+      /* grid-template-columns: 1fr 0.5fr 0.1fr; */
     background:white;
     padding:15px;
     margin-bottom:15px;
     border-radius:12px;
     cursor:pointer;
     box-shadow:0 2px 6px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
     }
 
     .menu-item:hover{
       transform: translateY(-2px);
-      transition: 0.2s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0,88);
     }
 
     .menu-header {
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    gap: 10px;
+    }
+    .menu-header h3{
+      flex: 1;
     }
 
     .menu-details {
@@ -247,7 +261,7 @@
     .menu-right {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     }
 
     .arrow {
@@ -260,15 +274,42 @@
     }
 
     .price {
-      margin: 0 15px 15px;
       font-weight: 600;
       color: var(--coffee);
+      font-size: 15px;
     }
 
 
     /* #menu{
         padding: 0px 16px;
     } */
+
+
+    .badge {
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 8px;
+    margin-left: 8px;
+    font-weight: 500;
+    }
+
+    .badge.best {
+    background: #ffe8cc;
+    color: #b56a00;
+    }
+
+    .badge.popular {
+    background: #ffe0e0;
+    color: #c0392b;
+    }
+
+    .badge.new {
+    background: #e6f7ff;
+    color: #0077b6;
+    }
+
+
+
 
     /* ---------- ABOUT SECTION ---------- */
     #about>h2{
@@ -357,6 +398,7 @@
       color: white;
       text-align: center;
       padding: 30px 10%;
+      padding-bottom: 80px;
     }
 
     .social-icons {
@@ -406,6 +448,38 @@
 
 /* new */
 
+    /* Floating Buttons */
+
+    .floating-buttons {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 999;
+    }
+
+    .float-btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #3e2723;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+    transition: 0.2s ease;
+    backdrop-filter: blur(8px); 
+    }
+
+    .float-btn:hover {
+    transform: translateY(-3px);
+    background: var(--accent);
+    }
+
 
 
 
@@ -433,61 +507,73 @@
 
     @media (max-width: 768px){
 
-    section{
-    padding:60px 20px;
-    }
+      section{
+      padding:60px 20px;
+      }
 
-    /* Header */
-    header{
-    padding:15px 20px;
-    }
+      /* Header */
+      header{
+      padding:15px 20px;
+      }
 
-    .logo{
-    font-size:1.2em;
-    }
+      .logo{
+      font-size:1.2em;
+      }
 
-    nav ul{
-    gap:15px;
-    }
+      nav ul{
+      gap:15px;
+      }
 
-    /* Hero */
-    .hero h1{
-    font-size:2.2em;
-    }
+      /* Hero */
+      .hero h1{
+      font-size:2.2em;
+      }
 
-    .hero p{
-    font-size:1em;
-    }
+      .hero p{
+      font-size:1em;
+      }
 
-    /* Menu */
-    #menu h2{
-    font-size:2.2em;
-    }
+      /* Menu */
+      #menu h2{
+      font-size:2.2em;
+      }
 
-    .category-title{
-    font-size:1.6em;
-    }
+      .category-title{
+      font-size:1.6em;
+      }
 
-    .menu-items{
-    grid-template-columns:1fr;
-    }
+      .menu-items{
+      grid-template-columns:1fr;
+      }
 
-    /* About */
-    .about{
-    flex-direction:column;
-    text-align:center;
-    }
+      /* About */
+      .about{
+      flex-direction:column;
+      text-align:center;
+      }
 
-    /* Contact */
-    form{
-    padding:0 10px;
-    }
+      /* Contact */
+      form{
+      padding:0 10px;
+      }
 
-    /* Footer */
-    footer .address{
-    flex-direction:column;
-    gap:20px;
-    }
+      /* Footer */
+      footer .address{
+      flex-direction:column;
+      gap:20px;
+      }
+      .floating-buttons {
+      bottom: 15px;
+      right: 12px;
+      gap: 8px;
+      }
+
+      .float-btn {
+      width: 44px;
+      height: 44px;
+      font-size: 18px;
+      }
+
     }
 
     @media (max-width:480px){
